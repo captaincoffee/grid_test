@@ -1,0 +1,112 @@
+
+body {
+  margin: 0;
+  /* padding: 0; */
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-size: 1em;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: black;
+}
+
+.heroimg {
+  grid-area: heroimg;
+  background-color: lightgray;
+}
+
+.header {
+  grid-area: header;
+  background-color: green;
+}
+
+.breadcrumb {
+  grid-area: breadcrumb;
+  background-color: orange;
+}
+
+.lead {
+  grid-area: lead;
+  background-color: pink;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: blue;
+}
+
+.sidebar>ol {
+  display: none;
+}
+
+.header>p,
+.sidebar>p {
+  /* font-size: 0.875rem; */
+  text-align: right;
+  padding: 0;
+}
+
+.main {
+  grid-area: main;
+  background-color: red;
+}
+
+.main * {
+  max-width: 700px;
+}
+
+.tags {
+  grid-area: tags;
+  background-color: indigo;
+}
+
+.sidebar li,
+.tags li {
+  display: inline;
+}
+
+.related {
+  grid-area: related;
+  background-color: black;
+}
+
+.share {
+  grid-area: share;
+  background-color: purple;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: gray;
+}
+
+.box {
+  color: #fff;
+  /* border-radius: 5px; */
+  padding: 1.5rem;
+}
+
+@media screen and (min-width: 48em) {
+  .wrapper {
+    display: grid;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "nav nav nav nav"
+    "header header header header"
+    "heroimg heroimg heroimg heroimg"
+    "sidebar breadcrumb breadcrumb breadcrumb"
+    "sidebar lead lead lead"
+    "sidebar main main main"
+    "tags related related share"
+    "footer footer footer footer";
+  }
+
+  .sidebar>ol,
+  .sidebar li,
+  .tags li {
+    display: block;
+  }
+}
